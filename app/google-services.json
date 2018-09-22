@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "19682272524",
+    "firebase_url": "https://swaghunt-9b75e.firebaseio.com",
+    "project_id": "swaghunt-9b75e",
+    "storage_bucket": "swaghunt-9b75e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19682272524:android:18bfc0d8ee028769",
+        "android_client_info": {
+          "package_name": "tech.swaghunt.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "19682272524-mhejcka7iumdohu1k4ggt4oalu7fflph.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.swaghunt.app",
+            "certificate_hash": "21e149b53c30fc5d2bf3565f8adee2d8bee41fce"
+          }
+        },
+        {
+          "client_id": "19682272524-msu8f46a0n0hvb09037qku760bkaitaq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqPmRx-2rRg7afDTw8yhZxyd-L6fGw4Xg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "19682272524-msu8f46a0n0hvb09037qku760bkaitaq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
