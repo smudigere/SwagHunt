@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SwagHunt</string>
+
+    <string name="Create">Create</string>
+    <string name="Play">Play</string>
+
 </resources>
