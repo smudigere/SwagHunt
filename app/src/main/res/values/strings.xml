@@ -3,5 +3,10 @@
 
     <string name="Create">Create</string>
     <string name="Play">Play</string>
+    <string name="Submit">Submit</string>
+
+    <string name="Enter_type_of_task">Enter the type of Task:</string>
+
+    <string name="Question_Number_of_steps">How many steps in your hunt?</string>
 
 </resources>

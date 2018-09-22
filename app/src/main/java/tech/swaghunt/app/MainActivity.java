@@ -1,5 +1,6 @@
 package tech.swaghunt.app;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity implements
 
         mPlay = findViewById(R.id.play_button);
         mCreate = findViewById(R.id.create_button);
+
+        init_controller();
     }
 
 
@@ -31,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements
         mCreate.setOnClickListener(this);
     }
 
+    private void startActivity(Class<?> cls)    {
+        startActivity(new Intent(this, cls));
+    }
 
     @Override
     public void onClick(View view) {
@@ -38,10 +44,10 @@ public class MainActivity extends AppCompatActivity implements
         switch (view.getId())   {
 
             case R.id.play_button:
-
+                startActivity(PlayActivity.class);
                 break;
             case R.id.create_button:
-
+                startActivity(CreateActivity.class);
                 break;
         }
 
