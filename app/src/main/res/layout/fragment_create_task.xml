@@ -90,13 +90,13 @@
         android:text="@string/Select_Photo_From_Library"
         />
 -->
-    <Button
-        android:id="@+id/scan_qr_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="185dp"
-        android:text="@string/Open_Camera_To_Scan_QR_Code" />
+        <Button
+            android:id="@+id/scan_qr_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="185dp"
+            android:text="@string/Open_Camera_To_Scan_QR_Code" />
 
 </RelativeLayout>
