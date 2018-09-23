@@ -117,6 +117,8 @@ public class CameraScanActvity extends AppCompatActivity {
                         Intent intent = new Intent();
                         intent.putExtra("BARCODE", symData);
                         setResult(PlayActivity.CAMERA_SCAN_ACTIVITY_RESULT, intent);
+
+                        finish();
                     }
                 }
             }

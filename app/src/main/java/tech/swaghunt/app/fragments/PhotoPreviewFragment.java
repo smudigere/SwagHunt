@@ -1,5 +1,6 @@
 package tech.swaghunt.app.fragments;
 
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
 
 import tech.swaghunt.app.CreateActivity;
 import tech.swaghunt.app.R;
@@ -28,10 +30,17 @@ public class PhotoPreviewFragment extends Fragment implements
         return fragment;
     }
 
+    public static PhotoPreviewFragment newInstance(Bitmap bitmap) {
+
+        PhotoPreviewFragment fragment = new PhotoPreviewFragment();
+        fragment.bitmap = bitmap;
+
+        return fragment;
+    }
+
+    private Bitmap bitmap;
     protected Uri bigImage;
     private ImageView imageView;
-
-    private CreateActivity mCreateActivity;
 
     /**
      * Called to have the fragment instantiate its user interface view.
@@ -50,8 +59,6 @@ public class PhotoPreviewFragment extends Fragment implements
 
         View view = inflater.inflate(R.layout.fragment_photo_preview, container, false);
 
-        mCreateActivity = (CreateActivity) getActivity();
-
         RelativeLayout relativeLayout = view.findViewById(R.id.container);
         relativeLayout.setOnClickListener(this);
 
@@ -64,10 +71,13 @@ public class PhotoPreviewFragment extends Fragment implements
 
     private void updateImage()  {
 
-            Glide.with(mCreateActivity)
+
+        if (bigImage == null)
+            Glide.with(getActivity())
                     .load(bigImage)
                     .into(imageView);
-
+        else
+            imageView.setImageBitmap(bitmap);
     }
 
     /**
