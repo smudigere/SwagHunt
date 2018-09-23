@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tech.swaghunt.app">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,6 +25,11 @@
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"
             android:value="label,model2,model3" />
         <!-- To use multiple models: android:value="label,model2,model3" -->
+
+        <activity android:name=".CreateActivity" />
+        <activity android:name=".PlayActivity"/>
+        <activity android:name=".CameraScanActvity"/>
+
     </application>
 
 </manifest>

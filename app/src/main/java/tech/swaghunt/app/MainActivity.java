@@ -18,7 +18,6 @@ import android.util.SparseIntArray;
 import android.view.Surface;
 import android.webkit.MimeTypeMap;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -34,25 +33,30 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-
 import tech.swaghunt.app.models.Hunt;
 import tech.swaghunt.app.models.HuntTask;
 import tech.swaghunt.app.models.Image;
 import tech.swaghunt.app.models.Player;
+import android.content.Intent;
+import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements
+        View.OnClickListener{
     private static final String TAG = "MAIN";
     private DatabaseReference mDatabase;
     private StorageReference storageReference;
+    private Button mPlay, mCreate;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         mDatabase = database.getReference();
 
@@ -82,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 images, texts, qrCodes, tasksIDsCompleted);
 
         createHunt("grizzhunt 2", tasks, "qrCode");
-
+        init_ui();
     }
 
     void imageDetection(){
@@ -234,5 +238,38 @@ public class MainActivity extends AppCompatActivity {
         ContentResolver cR = getContentResolver();
         MimeTypeMap mime = MimeTypeMap.getSingleton();
         return mime.getExtensionFromMimeType(cR.getType(uri));
+    }
+
+
+    private void init_ui()  {
+
+        mPlay = findViewById(R.id.play_button);
+        mCreate = findViewById(R.id.create_button);
+
+        init_controller();
+    }
+
+
+    private void init_controller()  {
+        mPlay.setOnClickListener(this);
+        mCreate.setOnClickListener(this);
+    }
+
+    private void startActivity(Class<?> cls)    {
+        startActivity(new Intent(this, cls));
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        switch (view.getId())   {
+
+            case R.id.play_button:
+                startActivity(PlayActivity.class);
+                break;
+            case R.id.create_button:
+                startActivity(CreateActivity.class);
+                break;
+        }
     }
 }
