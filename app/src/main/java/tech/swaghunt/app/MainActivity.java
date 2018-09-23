@@ -18,6 +18,7 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -40,24 +41,29 @@ public class MainActivity extends AppCompatActivity {
         FirebaseStorage storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 
-//        List<Image> images = new ArrayList<>();
-//        images.add(new Image("img1Ref", "url"));
-//        images.add(new Image("img2Ref", "url"));
-//
-//        List<String> texts = new ArrayList<>();
-//        texts.add("txt1");
-//        texts.add("txt2");
-//
-//        List<String> qrCodes = new ArrayList<>();
-//        qrCodes.add("qrCode1");
-//        qrCodes.add("qrCode2");
-//
-//        List<String> tasksIDsCompleted = new ArrayList<>();
-//        tasksIDsCompleted.add("taskId1");
-//        tasksIDsCompleted.add("taskID2");
-//
-//        writeNewPlayer("playerName1", "huntIDBeingPlayed", false,
-//                images, texts, qrCodes, tasksIDsCompleted);
+        List<Image> images = new ArrayList<>();
+        images.add(new Image("img1Ref", "url"));
+        images.add(new Image("img2Ref", "url"));
+
+        List<String> texts = new ArrayList<>();
+        texts.add("txt1");
+        texts.add("txt2");
+
+        List<String> qrCodes = new ArrayList<>();
+        qrCodes.add("qrCode1");
+        qrCodes.add("qrCode2");
+
+        List<String> tasksIDsCompleted = new ArrayList<>();
+        tasksIDsCompleted.add("taskId1");
+        tasksIDsCompleted.add("taskID2");
+
+        List<Task> tasks = new ArrayList<Task>();
+        tasks.add(new Task("clue", "clueAnswer", new Image("imgName", "imgUrl"), "text", "qrCodes", "taskType", "huntId"));
+
+        createPlayer("playerName1", "huntIDBeingPlayed", false,
+                images, texts, qrCodes, tasksIDsCompleted);
+
+        createHunt("grizzhunt", tasks, "qrCode");
 
     }
 
