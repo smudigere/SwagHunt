@@ -6,9 +6,9 @@ import java.util.List;
 
 @IgnoreExtraProperties
 public class Hunt {
-    private String name;
-    private List<Task> tasks;
-    private String qrCode;
+    String name;
+    List<Task> tasks;
+    String qrCode;
 
     public Hunt() {
 

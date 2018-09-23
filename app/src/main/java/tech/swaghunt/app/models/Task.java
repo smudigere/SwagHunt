@@ -4,13 +4,13 @@ import com.google.firebase.database.IgnoreExtraProperties;
 
 @IgnoreExtraProperties
 public class Task {
-    private String clue;
-    private String clueAnswer;
-    private String image;
-    private String text;
-    private String qrCodes;
-    private String taskType;
-    private String huntId;
+    String clue;
+    String clueAnswer;
+    String image;
+    String text;
+    String qrCodes;
+    String taskType;
+    String huntId;
 
     public Task() {
 
