@@ -10,7 +10,7 @@ public class Player {
     String name;
     String huntPlaying;
     Boolean hasWon;
-    List<String> Images;
+    List<Image> Images;
     List<String> text;
     List<String> qrCodes;
     List<String> tasksIDsCompleted;
@@ -19,7 +19,7 @@ public class Player {
 
     }
 
-    public Player(String name, String huntPlaying, Boolean hasWon, List<String> images, List<String> text, List<String> qrCodes, List<String> tasksIDsCompleted) {
+    public Player(String name, String huntPlaying, Boolean hasWon, List<Image> images, List<String> text, List<String> qrCodes, List<String> tasksIDsCompleted) {
         this.name = name;
         this.huntPlaying = huntPlaying;
         this.hasWon = hasWon;

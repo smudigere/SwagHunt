@@ -6,7 +6,7 @@ import com.google.firebase.database.IgnoreExtraProperties;
 public class Task {
     String clue;
     String clueAnswer;
-    String image;
+    Image image;
     String text;
     String qrCodes;
     String taskType;
@@ -16,7 +16,7 @@ public class Task {
 
     }
 
-    public Task(String clue, String clueAnswer, String image, String text, String qrCodes, String taskType, String huntId) {
+    public Task(String clue, String clueAnswer, Image image, String text, String qrCodes, String taskType, String huntId) {
         this.clue = clue;
         this.clueAnswer = clueAnswer;
         this.image = image;
