@@ -7,16 +7,16 @@ import java.util.List;
 @IgnoreExtraProperties
 public class Hunt {
     String name;
-    List<Task> tasks;
+    List<HuntTask> huntTasks;
     String qrCode;
 
     public Hunt() {
 
     }
 
-    public Hunt(String name, List<Task> tasks, String qrCode) {
+    public Hunt(String name, List<HuntTask> huntTasks, String qrCode) {
         this.name = name;
-        this.tasks = tasks;
+        this.huntTasks = huntTasks;
         this.qrCode = qrCode;
     }
 }
