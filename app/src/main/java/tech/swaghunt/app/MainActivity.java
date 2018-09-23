@@ -39,29 +39,6 @@ public class MainActivity extends AppCompatActivity implements
         FirebaseStorage storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 
-//        List<Image> images = new ArrayList<>();
-//        images.add(new Image("img1Ref", "url"));
-//        images.add(new Image("img2Ref", "url"));
-//
-//        List<String> texts = new ArrayList<>();
-//        texts.add("txt1");
-//        texts.add("txt2");
-//
-//        List<String> qrCodes = new ArrayList<>();
-//        qrCodes.add("qrCode1");
-//        qrCodes.add("qrCode2");
-//
-//        List<String> tasksIDsCompleted = new ArrayList<>();
-//        tasksIDsCompleted.add("taskId1");
-//        tasksIDsCompleted.add("taskID2");
-//
-//        List<HuntTask> tasks = new ArrayList<HuntTask>();
-//        tasks.add(new HuntTask("clue", "clueAnswer", new Image("imgName", "imgUrl"), "text", "qrCodes", "taskType", "huntId"));
-
-//        createPlayer("playerName 2", "huntIDBeingPlayed", true,
-//                images, texts, qrCodes, tasksIDsCompleted);
-//
-//        createHunt("grizzhunt 2", tasks, "qrCode");
         init_ui();
     }
 
