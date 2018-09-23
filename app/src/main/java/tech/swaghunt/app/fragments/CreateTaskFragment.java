@@ -40,8 +40,8 @@ public class CreateTaskFragment extends Fragment implements
     private Spinner mSpinner;
     private TextView mTaskCountTextView;
     private Button mSubmitButton, mScanQrButton;
-    private TextInputLayout mTextInputLayout;
-    private TextInputEditText mClueEditText;
+    private TextInputLayout mTextInputLayout0, mTextInputLayout1;
+    private TextInputEditText mClueEditText, mAnswerEdittext;
 
     private int taskCounter, totalTaskCount;
 
@@ -128,27 +128,26 @@ public class CreateTaskFragment extends Fragment implements
     }
 
     private void init_text_input_layout(View view)  {
-        mTextInputLayout = view.findViewById(R.id.text_input_layout);
+        mTextInputLayout0 = view.findViewById(R.id.text_input_layout0);
+        mTextInputLayout1 = view.findViewById(R.id.text_input_layout1);
     }
 
     private void init_clue_input_edit_text(View view)   {
         mClueEditText = view.findViewById(R.id.clue_input_edit_text);
+        mAnswerEdittext = view.findViewById(R.id.answer_input_edit_text);
     }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-        mTextInputLayout.setVisibility(View.INVISIBLE);
         mScanQrButton.setVisibility(View.INVISIBLE);
 
         switch (i)  {
             case 0:
-                mTextInputLayout.setVisibility(View.VISIBLE);
-                mClueEditText.setHint(R.string.Enter_Clue);
+                mAnswerEdittext.setHint(R.string.Enter_the_Answer);
                 break;
             case 1:
-                mTextInputLayout.setVisibility(View.VISIBLE);
-                mClueEditText.setHint(R.string.Enter_the_name_of_the_Object);
+                mAnswerEdittext.setHint(R.string.Enter_the_name_of_the_Object);
                 break;
             case 2:
                 mScanQrButton.setVisibility(View.VISIBLE);

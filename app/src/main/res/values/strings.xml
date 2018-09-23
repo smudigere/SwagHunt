@@ -9,6 +9,7 @@
     <string name="Enter_type_of_task">Enter the type of Task:</string>
     <string name="Enter_Clue">Enter Clue:</string>
     <string name="Enter_the_name_of_the_Object">Enter the name of the Object:</string>
+    <string name="Enter_the_Answer">Enter the Answer:</string>
 
     <string name="Select_Photo_From_Library">Select Photo From Library</string>
     <string name="Open_Camera_To_Scan_QR_Code">Open Camera To Scan QR Code</string>
